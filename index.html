@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Busy Bee</title>
+    </head>
+    <body>
+        <aside class="sidebar">
+            <img
+                class="sidebar__logo"
+                src="/busy-bee-logo.png"
+                alt="busy bee logo"
+            />
+            <ul class="sidebar__nav">
+                <li class="sidebar__nav-item active">All tasks</li>
+                <li class="sidebar__nav-item">Today</li>
+                <li class="sidebar__nav-item">Due dates</li>
+                <li class="sidebar__nav-item">Recurring tasks</li>
+                <li class="sidebar__nav-item">Trash</li>
+            </ul>
+            <img
+                class="sidebar__theme-btn"
+                src="/sun-icon.png"
+                alt="sun icon"
+            />
+        </aside>
+
+        <main class="main">
+            <nav class="main__navbar">
+                <div class="navbar__time">
+                    <p class="navbar__day">Today</p>
+                    <h3 class="navbar__date">Jan 1, 2000</h3>
+                </div>
+
+                <div class="navbar__info">
+                    <img
+                        class="navbar__icon"
+                        src="/notifications-icon.png"
+                        alt=""
+                    />
+                    <img class="navbar__icon" src="/profile-icon.png" alt="" />
+                </div>
+            </nav>
+
+            <section class="main__title-container">
+                <p class="main__pretitle">Hello, Yordy</p>
+                <h2 class="main__title">You've got <br />$ tasks today</h2>
+                <div class="main__search">
+                    <img
+                        class="main__search-icon"
+                        src="/search-icon.png"
+                        alt=""
+                    />
+                    <input
+                        class="main__search-input"
+                        type="text"
+                        placeholder="Search"
+                    />
+                </div>
+            </section>
+
+            <section class="main__tasks">
+                <header class="tasks__header">
+                    <h2 class="header__title">All tasks</h2>
+                    <button class="primary-btn" id="add-tasks-btn">
+                        add tasks
+                    </button>
+                </header>
+
+                <ul class="tasks__nav">
+                    <li class="tasks__nav-item active">recently</li>
+                    <li class="tasks__nav-item">today</li>
+                    <li class="tasks__nav-item">upcoming</li>
+                    <li class="tasks__nav-item">priority</li>
+                </ul>
+            </section>
+
+            <section class="tasks-container">
+                <div class="task-box">
+                    <div class="task-box__header">
+                        <img
+                            class="task-box__circle"
+                            src="/circle-icon.png"
+                            alt="circle icon"
+                        />
+                        <h3 class="task-box__title">Lorem, ipsum dolor.</h3>
+                    </div>
+
+                    <p class="task-box__description">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Cumque ratione beatae ipsum eligendi rem placeat
+                        mollitia id, perspiciatis error animi.
+                    </p>
+
+                    <div class="task-box__footer">
+                        <img
+                            class="task-box__edit task-box__icon"
+                            src="/edit-icon.png"
+                            alt="edit icon"
+                        />
+                        <img
+                            class="task-box__tag task-box__icon"
+                            src="/tag-icon.png"
+                            alt="tag icon"
+                        />
+                        <img
+                            class="task-box__menu task-box__icon"
+                            src="/menu-icon.png"
+                            alt="menu icon"
+                        />
+                        <p class="task-box__date">Jan 01, 2000</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <aside class="details-bar">
+            <img class="details__close" src="/x-icon.png" alt="" />
+
+            <div class="details__timer">
+                <h2 class="details__timer-title">
+                    Start a focus <br />session
+                </h2>
+                <button class="secondary-btn details__timer-btn">
+                    Start a timer
+                </button>
+            </div>
+
+            <div class="details__edit-title">
+                <div class="details__title-container">
+                    <img
+                        class="details__cirlce-icon"
+                        src="/small-circle-icon.png"
+                        alt=""
+                    />
+                    <p class="details__title">Title</p>
+                </div>
+                <div class="details__subtask-container">
+                    <img
+                        class="details__plus-icon"
+                        src="/blue-plus-icon.png"
+                        alt=""
+                    />
+                    <p class="details__subtask">Add sub-task</p>
+                </div>
+            </div>
+
+            <div class="details__edit-date">
+                <p class="details__date-title">Dates</p>
+                <div class="details__date-box-container">
+                    <div class="details__date-box">
+                        <img src="/remind-icon.png" alt="" />
+                        <p class="details__edit-name">Remind me</p>
+                    </div>
+                    <div class="details__date-box">
+                        <img src="/calander-icon.png" alt="" />
+                        <p class="details__edit-name">Add due date</p>
+                    </div>
+                    <div class="details__date-box">
+                        <img src="/repeat-icon.png" alt="" />
+                        <p class="details__edit-name">Repeat</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details__edit-additional">
+                <img src="/priority-icon.png" alt="" />
+                <p class="details__edit-name">Add priority</p>
+            </div>
+            <div class="details__edit-additional">
+                <img src="/file-icon.png" alt="" />
+                <p class="details__edit-name">Add file</p>
+            </div>
+            <textarea class="details__note" placeholder="Add Note"></textarea>
+
+            <div class="details__footer">
+                <p class="details__footer-date">Created on Wed, Jan 01, 2000</p>
+                <img src="/delete-icon.png" alt="" />
+            </div>
+        </aside>
+
+        <div class="add-task-panel" id="add-task-panel">
+            <div class="add-task__bg" id="add-task__bg"></div>
+            <div class="add-task__content">
+                <img
+                    class="add-task__close"
+                    id="add-task__close"
+                    src="/x-icon.png"
+                    alt=""
+                />
+                <h2 class="add-task__title">Add a task</h2>
+                <input
+                    class="add-task__title-input"
+                    type="text"
+                    placeholder="Title"
+                />
+                <textarea
+                    class="add-task__description-input"
+                    placeholder="Description"
+                ></textarea>
+                <div class="add-task__controls">
+                    <div class="add-task__additional">
+                        <img src="/tag-icon.png" alt="" />
+                        <img src="/link-icon.png" alt="" />
+                        <img src="/blue-circle-icon.png" alt="" />
+                    </div>
+
+                    <button class="primary-btn" id="add-task">Add task</button>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="timer">
+            <div class="timer__bg"></div>
+            <div class="timer__content">
+                <img class="timer__close" src="/x-icon.png" alt="" />
+                <ul class="timer__controls-container">
+                    <li class="timer__control active">Timer</li>
+                    <li class="timer__control">Break</li>
+                </ul>
+                <h1 class="timer__time">25:00</h1>
+                <button class="primary-btn">Start</button>
+            </div>
+        </div> -->
+
+        <script type="module" src="./src/main.js"></script>
+    </body>
+</html>

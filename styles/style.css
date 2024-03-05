@@ -1,0 +1,45 @@
+:root {
+    --main-font: "Poppins", sans-serif;
+
+    --clr-primary: #ed489e;
+    --clr-secondary: #4b4ded;
+    --clr-dark: #0e0e2c;
+    --clr-success: #31d0aa;
+    --clr-text: #4a4a68;
+    --clr-subtle-text: #8c8ca1;
+    --clr-accent: #ecf1f4;
+    --clr-light: #fafcfe;
+
+    /* --clr-primary: hsl(329, 82%, 50%); */
+    /* --clr-secondary: hsl(239, 82%, 50%); */
+    /* --clr-dark: rgba(14, 14, 44, .1); */
+
+    --size-h1: 64px;
+    --size-h2: 40px;
+    --size-h3: 24px;
+    --size-body: 16px;
+    --size-small: 14px;
+    --size-pre-title: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: calc(1em + 0.5rem);
+    color: var(--clr-dark);
+}
+
+body {
+    /* background-color: var(--clr-light); */
+    background-image: url("/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    /* gap: 56px; */
+}
+
+i {
+    font-size: var(--size-h3);
+}

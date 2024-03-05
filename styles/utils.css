@@ -1,0 +1,38 @@
+.link {
+    font-family: var(--main-font);
+    color: var(--clr-secondary);
+    font-size: var(--size-body);
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+button {
+    padding: 8px 24px;
+    border: none;
+
+    font-weight: bold;
+    font-family: var(--main-font);
+    font-size: var(--size-body);
+    letter-spacing: 4%;
+    text-transform: uppercase;
+
+    color: var(--clr-light);
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background-color: var(--clr-primary);
+}
+
+.primary-btn:hover {
+    background-color: hsl(329, 82%, 50%);
+}
+
+.secondary-btn {
+    background-color: var(--clr-secondary);
+}
+
+.secondary-btn:hover {
+    background-color: hsl(239, 82%, 50%);
+}
