@@ -2,6 +2,20 @@
     position: fixed;
     inset: 0;
     z-index: 100;
+
+    opacity: 0;
+    scale: 0.5s;
+    visibility: hidden;
+    pointer-events: none;
+    transition-property: opacity, scale;
+    transition-duration: 0.3s;
+}
+
+.timer.active {
+    opacity: 1;
+    scale: 1;
+    visibility: visible;
+    pointer-events: all;
 }
 
 .timer__bg {

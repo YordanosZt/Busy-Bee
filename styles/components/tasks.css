@@ -27,16 +27,21 @@
 
 .task-box__title {
     font-size: var(--size-h3);
+    font-weight: bold;
     color: var(--clr-dark);
     word-wrap: break-word;
+    outline: none;
+    width: 100%;
 }
 
 .task-box__description {
     font-size: var(--size-small);
     color: var(--clr-text);
     margin-block: 16px 32px;
-    width: 100%;
     word-wrap: break-word;
+    min-height: 80px;
+    outline: none;
+    width: 100%;
 }
 
 .task-box__footer {

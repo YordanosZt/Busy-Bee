@@ -7,3 +7,11 @@ import "../styles/components/detailsBar.css";
 import "../styles/components/addTasks.css";
 import "../styles/components/timer.css";
 import "../styles/utils.css";
+
+import onReload from "./onReload";
+import panelOpenClose from "./panelOpenClose";
+
+onReload();
+panelOpenClose();
+
+import "./test";

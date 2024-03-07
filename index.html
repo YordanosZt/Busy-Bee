@@ -64,7 +64,7 @@
             <section class="main__tasks">
                 <header class="tasks__header">
                     <h2 class="header__title">All tasks</h2>
-                    <button class="primary-btn" id="add-tasks-btn">
+                    <button class="primary-btn" id="add-tasks__main-btn">
                         add tasks
                     </button>
                 </header>
@@ -77,23 +77,23 @@
                 </ul>
             </section>
 
-            <section class="tasks-container">
-                <div class="task-box">
+            <section class="tasks-container" id="tasks-container">
+                <!-- <div class="task-box">
                     <div class="task-box__header">
                         <img
                             class="task-box__circle"
                             src="/circle-icon.png"
                             alt="circle icon"
                         />
-                        <h3 class="task-box__title">Lorem, ipsum dolor.</h3>
+                        <h3 class="task-box__title" contenteditable>
+                            Lorem, ipsum dolor.
+                        </h3>
                     </div>
 
-                    <p class="task-box__description">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Cumque ratione beatae ipsum eligendi rem placeat
-                        mollitia id, perspiciatis error animi.
+                    <p class="task-box__description" contenteditable>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Provident tenetur ad, odit est illum minus!
                     </p>
-
                     <div class="task-box__footer">
                         <img
                             class="task-box__edit task-box__icon"
@@ -112,7 +112,7 @@
                         />
                         <p class="task-box__date">Jan 01, 2000</p>
                     </div>
-                </div>
+                </div> -->
             </section>
         </main>
 
@@ -193,11 +193,13 @@
                 <h2 class="add-task__title">Add a task</h2>
                 <input
                     class="add-task__title-input"
+                    id="add-task__title-input"
                     type="text"
                     placeholder="Title"
                 />
                 <textarea
                     class="add-task__description-input"
+                    id="add-task__description-input"
                     placeholder="Description"
                 ></textarea>
                 <div class="add-task__controls">
@@ -207,11 +209,14 @@
                         <img src="/blue-circle-icon.png" alt="" />
                     </div>
 
-                    <button class="primary-btn" id="add-task">Add task</button>
+                    <button class="primary-btn" id="add-task__panel-btn">
+                        Add task
+                    </button>
                 </div>
             </div>
         </div>
-        <!-- <div class="timer">
+
+        <div class="timer">
             <div class="timer__bg"></div>
             <div class="timer__content">
                 <img class="timer__close" src="/x-icon.png" alt="" />
@@ -222,7 +227,7 @@
                 <h1 class="timer__time">25:00</h1>
                 <button class="primary-btn">Start</button>
             </div>
-        </div> -->
+        </div>
 
         <script type="module" src="./src/main.js"></script>
     </body>

@@ -6,6 +6,8 @@
     scale: 0.5s;
     visibility: hidden;
     pointer-events: none;
+    transition-property: opacity, scale;
+    transition-duration: 0.3s;
 }
 
 .add-task-panel.active {
