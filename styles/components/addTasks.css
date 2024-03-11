@@ -87,3 +87,136 @@
     right: 24px;
     cursor: pointer;
 }
+
+.add-task__tag {
+    position: relative;
+}
+
+.add-task__tag-btn:hover ~ .add-task__tag-input,
+.add-task__tag-input:hover {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.add-task__tag-input {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    z-index: 102;
+    padding: 14px 24px;
+    background-color: var(--clr-accent);
+    border: 1px solid var(--clr-subtle-text);
+    outline: none;
+    border-radius: 8px;
+    box-shadow: 4px 4px 4px rgba(14, 14, 44, 0.25);
+    min-width: 500px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+}
+
+.add-task__tag-input.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.add-task__tag-input:focus {
+    border-color: var(--clr-text);
+}
+
+.add-task__tag-input::placeholder {
+    font-size: var(--clr-small);
+    color: var(--clr-subtle-text);
+    color: 500;
+}
+
+.add-task__priority-btn:hover ~ .add-task__priority-menu,
+.add-task__priority-menu:hover {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.add-task__priority {
+    position: relative;
+}
+
+.add-task__priority-menu {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 100px;
+    overflow: hidden;
+
+    list-style: none;
+
+    background-color: var(--clr-light);
+    border: 1px solid var(--clr-subtle-text);
+    border-radius: 8px;
+    box-shadow: 4px 4px 4px rgba(14, 14, 44, 0.25);
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.add-task__priority-item {
+    width: 100%;
+    text-align: center;
+
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.add-task__priority-item p {
+    width: 100%;
+    padding-block: 8px;
+
+    font-size: var(--size-pre-title);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.add-task__priority-item p:hover {
+    background-color: var(--clr-accent);
+}
+
+.add-task__priority-item p.active {
+    background-color: var(--clr-dark);
+}
+
+p[data-priority-value="high"] {
+    color: var(--clr-primary);
+}
+
+p[data-priority-value="medium"] {
+    color: var(--clr-secondary);
+}
+
+p[data-priority-value="low"] {
+    color: var(--clr-success);
+}
+
+p[data-priority-value="none"] {
+    color: var(--clr-text);
+}
+
+.add-task__due-date {
+    width: 100%;
+}
+
+.add-task__due-date p {
+    font-size: var(--size-body);
+}
+
+.add-task__due-date-input {
+    width: 100%;
+    padding: 8px;
+    background-color: var(--clr-accent);
+    border: 1px solid var(--clr-text);
+    border-radius: 8px;
+    outline: none;
+}
+
+.add-task__due-date-input:focus {
+    border-color: var(--clr-text);
+}

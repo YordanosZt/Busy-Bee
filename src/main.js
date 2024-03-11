@@ -14,4 +14,4 @@ import panelOpenClose from "./panelOpenClose";
 onReload();
 panelOpenClose();
 
-import "./test";
+import "./addTaskPanel";
