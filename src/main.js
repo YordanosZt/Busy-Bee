@@ -9,3 +9,4 @@ import "../styles/components/timer.css";
 import "../styles/utils.css";
 
 import "./AddPanel";
+import "./EditPanel";

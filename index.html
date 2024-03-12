@@ -249,7 +249,7 @@
                                 <li
                                     class="priority__item low"
                                     style="--clr-main: var(--clr-success)"
-                                    data-priority-value="high"
+                                    data-priority-value="low"
                                 >
                                     <div class="priority__circle"></div>
                                     <p>Low</p>
@@ -266,9 +266,18 @@
                         </div>
                     </div>
 
-                    <button class="primary-btn" id="panel__add-task">
-                        Add task
-                    </button>
+                    <div class="panel__btns">
+                        <button class="primary-btn" id="panel__add-task">
+                            Add task
+                        </button>
+                        <button
+                            class="primary-btn"
+                            id="panel__edit-task"
+                            style="display: none"
+                        >
+                            Save Edits
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

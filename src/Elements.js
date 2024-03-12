@@ -22,9 +22,12 @@ const priorityMenu = document.querySelector(".priority__menu");
 // Panel Btns
 const addTasksPanelBtn = document.getElementById("panel__add-task");
 
+const saveEditsBtn = document.getElementById("panel__edit-task");
+
 // priority
 const priorityBtn = document.querySelector(".priority__btn");
 const priorityItems = document.querySelectorAll(".priority__item");
+let priorityValue = "";
 
 // =================================
 //              TASKS

@@ -1,21 +1,24 @@
-// On Reload
+// On load
 let data_deserialized = JSON.parse(localStorage.getItem("data"));
 
-data_deserialized.forEach((taskData) => {
-    let tagsList = taskData.tags.map(
-        (tag) => `<li class="tag__item">#${tag}</li>`
-    );
+if (data_deserialized != null) {
+    data_deserialized.forEach((taskData) => {
+        let tagsList = taskData.tags.map(
+            (tag) => `<li class="tag__item">#${tag}</li>`
+        );
 
-    let taskBox = createTaskBox({
-        title: taskData.title,
-        desc: taskData.desc,
-        priority: taskData.priority,
-        tagsList: tagsList.join(""),
-        dueDate: taskData.dueDate,
+        let taskBox = createTaskBox({
+            title: taskData.title,
+            desc: taskData.desc,
+            priority: taskData.priority,
+            tagsList: tagsList.join(""),
+            dueDate: taskData.dueDate,
+            taskId: taskData.Id,
+        });
+
+        tasksContainer.innerHTML += taskBox;
     });
-
-    tasksContainer.innerHTML += taskBox;
-});
+}
 
 // =============================
 //      PANEL OPEN / CLOSE
@@ -39,7 +42,6 @@ function ClosePanel() {
 // ========== Panel Controls ==========
 
 // Priority
-let priorityValue = "";
 
 priorityBtn.onclick = () => {
     priorityMenu.classList.add("active");
@@ -68,19 +70,25 @@ priorityItems.forEach((item) => {
 //   DATA SAVE AND TASK CREATE
 // =============================
 
-let data = [];
-
 addTasksPanelBtn.onclick = () => {
+    let data;
+
+    if (JSON.parse(localStorage.getItem("data")) != null) {
+        data = JSON.parse(localStorage.getItem("data"));
+    } else {
+        data = [];
+    }
+
     // Guard close if title is empty
     if (panelTitleInput.value.trim().length == 0) return;
 
     // Tag
-    let tagValues = panelTagsInput.value
-        .split(",")
-        .map((value) => value.trim());
+    let tagValues;
+
+    tagValues = panelTagsInput.value.split(",").map((value) => value.trim());
 
     // Random ID
-    let tagId = Math.floor(Math.random() * 100000000);
+    let taskId = Math.floor(Math.random() * 100000000);
 
     // Data
     let taskData = {
@@ -90,7 +98,7 @@ addTasksPanelBtn.onclick = () => {
         tags: tagValues,
         dueDate: panelDueDateInput.value,
         creationDate: "",
-        tagId: tagId,
+        Id: taskId,
     };
 
     data.push(taskData);
@@ -108,6 +116,7 @@ addTasksPanelBtn.onclick = () => {
         priority: taskData.priority,
         tagsList: tagsList.join(""),
         dueDate: taskData.dueDate,
+        taskId: taskData.Id,
     });
 
     tasksContainer.innerHTML += taskBox;
@@ -130,10 +139,13 @@ function ResetPanel() {
     priorityValue = "";
 
     priorityItems.forEach((item) => item.classList.remove("active"));
+
+    saveEditsBtn.style.display = "none";
+    addTasksPanelBtn.style.display = "block";
 }
 
-function createTaskBox({ title, desc, priority, tagsList, dueDate }) {
-    return `<div class="task-box" data-priority-value="${priority}">
+function createTaskBox({ title, desc, priority, tagsList, dueDate, taskId }) {
+    return `<div class="task-box" data-task-id="${taskId}" data-priority-value="${priority}">
                     <div class="task-box__header">
                         <img
                             class="task-box__circle"
