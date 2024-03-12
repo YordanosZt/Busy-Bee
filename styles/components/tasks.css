@@ -96,6 +96,12 @@
 
 .task-box__icon {
     cursor: pointer;
+    transition: filter 0.2s, scale 0.2s;
+}
+
+.task-box__icon:hover {
+    scale: 1.1;
+    filter: brightness(50%);
 }
 
 .task-box__date {

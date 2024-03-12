@@ -11,6 +11,11 @@
     padding: 24px;
     padding-bottom: 0;
     overflow: scroll;
+    transition: right 0.2s;
+}
+
+.details-bar.active {
+    right: 0;
 }
 
 .details-bar::-webkit-scrollbar {

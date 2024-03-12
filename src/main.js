@@ -10,8 +10,13 @@ import "../styles/utils.css";
 
 import onReload from "./onReload";
 import panelOpenClose from "./panelOpenClose";
+import handleTaskBox from "./taskBox";
+import handlePanel from "./addTaskPanel";
 
 onReload();
 panelOpenClose();
+handlePanel();
+handleTaskBox();
 
-import "./addTaskPanel";
+// import "./addTaskPanel";
+// import "./taskBox";

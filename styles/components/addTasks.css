@@ -98,6 +98,16 @@
     pointer-events: all;
 }
 
+.add-task__tag-btn {
+    cursor: pointer;
+    transition: filter 0.2s, scale 0.2s;
+}
+
+.add-task__tag-btn:hover {
+    scale: 1.1;
+    filter: brightness(50%);
+}
+
 .add-task__tag-input {
     position: absolute;
     top: -10px;
@@ -138,6 +148,16 @@
 
 .add-task__priority {
     position: relative;
+}
+
+.add-task__priority-btn {
+    cursor: pointer;
+    transition: filter 0.2s, scale 0.2s;
+}
+
+.add-task__priority-btn:hover {
+    scale: 1.1;
+    filter: brightness(50%);
 }
 
 .add-task__priority-menu {
@@ -219,4 +239,8 @@ p[data-priority-value="none"] {
 
 .add-task__due-date-input:focus {
     border-color: var(--clr-text);
+}
+
+#add-task__panel-edit-btn {
+    display: none;
 }
