@@ -78,7 +78,7 @@
             </section>
 
             <section class="tasks-container">
-                <div class="task-box">
+                <!-- <div class="task-box" data-priority-value="high">
                     <div class="task-box__header">
                         <img
                             class="task-box__circle"
@@ -87,6 +87,13 @@
                         />
                         <h3 class="task-box__title">Lorem, ipsum dolor.</h3>
                     </div>
+
+                    <ul class="task-box__tags-container">
+                        <li class="tag__item">#Untagged</li>
+                        <li class="tag__item">#Untagged</li>
+                        <li class="tag__item">#Untagged</li>
+                        <li class="tag__item">#Untagged</li>
+                    </ul>
 
                     <p class="task-box__description">
                         Lorem ipsum dolor, sit amet consectetur adipisicing
@@ -101,18 +108,13 @@
                             alt="edit icon"
                         />
                         <img
-                            class="task-box__tag task-box__icon"
-                            src="/tag-icon.png"
-                            alt="tag icon"
-                        />
-                        <img
                             class="task-box__menu task-box__icon"
                             src="/menu-icon.png"
                             alt="menu icon"
                         />
-                        <p class="task-box__date">Jan 01, 2000</p>
+                        <p class="task-box__date">Due: Jan 01, 2000</p>
                     </div>
-                </div>
+                </div> -->
             </section>
         </main>
 
@@ -181,33 +183,92 @@
             </div>
         </aside>
 
-        <div class="add-task-panel" id="add-task-panel">
-            <div class="add-task__bg" id="add-task__bg"></div>
-            <div class="add-task__content">
+        <div class="panel" id="panel">
+            <div class="panel__bg" id="panel__bg"></div>
+            <div class="panel__content">
                 <img
-                    class="add-task__close"
-                    id="add-task__close"
+                    class="panel__close"
+                    id="panel__close"
                     src="/x-icon.png"
                     alt=""
                 />
-                <h2 class="add-task__title">Add a task</h2>
+                <h2 class="panel__title">Add a task</h2>
                 <input
-                    class="add-task__title-input"
+                    class="panel__title-input"
                     type="text"
                     placeholder="Title"
                 />
                 <textarea
-                    class="add-task__description-input"
+                    class="panel__description-input"
                     placeholder="Description"
                 ></textarea>
-                <div class="add-task__controls">
-                    <div class="add-task__additional">
-                        <img src="/tag-icon.png" alt="" />
-                        <img src="/link-icon.png" alt="" />
-                        <img src="/blue-circle-icon.png" alt="" />
+
+                <div class="panel__tag-container">
+                    <p class="panel__input-title">Tags</p>
+                    <input
+                        type="text"
+                        class="panel__tag-input"
+                        placeholder="Separate by commas (E.g., Homework, Assignment, Math, English)"
+                    />
+                </div>
+
+                <div class="panel__tag-container">
+                    <p class="panel__input-title">Due Date</p>
+                    <input type="date" class="panel__due-date-input" />
+                </div>
+
+                <div class="panel__controls">
+                    <div class="panel__additional">
+                        <!-- <img src="/tag-icon.png" alt="" /> -->
+
+                        <div class="panel__priority">
+                            <img
+                                class="priority__btn"
+                                src="/blue-circle-icon.png"
+                                alt=""
+                                title="priority"
+                            />
+
+                            <ul class="priority__menu">
+                                <li
+                                    class="priority__item high"
+                                    style="--clr-main: var(--clr-primary)"
+                                    data-priority-value="high"
+                                >
+                                    <div class="priority__circle"></div>
+                                    <p>High</p>
+                                </li>
+                                <li
+                                    class="priority__item medium"
+                                    style="--clr-main: var(--clr-secondary)"
+                                    data-priority-value="medium"
+                                >
+                                    <div class="priority__circle"></div>
+                                    <p>Medium</p>
+                                </li>
+                                <li
+                                    class="priority__item low"
+                                    style="--clr-main: var(--clr-success)"
+                                    data-priority-value="high"
+                                >
+                                    <div class="priority__circle"></div>
+                                    <p>Low</p>
+                                </li>
+                                <li
+                                    class="priority__item none"
+                                    style="--clr-main: var(--clr-text)"
+                                    data-priority-value="none"
+                                >
+                                    <div class="priority__circle"></div>
+                                    <p>None</p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <button class="primary-btn" id="add-task">Add task</button>
+                    <button class="primary-btn" id="panel__add-task">
+                        Add task
+                    </button>
                 </div>
             </div>
         </div>
@@ -224,6 +285,8 @@
             </div>
         </div> -->
 
+        <script src="./src/Elements.js"></script>
+        r
         <script type="module" src="./src/main.js"></script>
     </body>
 </html>
