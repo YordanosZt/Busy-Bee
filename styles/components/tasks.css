@@ -15,6 +15,23 @@
     box-shadow: 4px 4px 50px rgba(14, 14, 44, 0.1);
 }
 
+.task-box.checked {
+    pointer-events: none;
+    opacity: 0.5;
+    filter: grayscale(100%);
+}
+
+.task-box__circle {
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.task-box.checked .task-box__circle {
+    pointer-events: all;
+    opacity: 1;
+    background-color: var(--clr-dark);
+}
+
 .task-box[data-priority-value="high"] {
     border-color: var(--clr-primary);
 }
@@ -45,6 +62,7 @@
     font-size: var(--size-h3);
     color: var(--clr-dark);
     word-wrap: break-word;
+    width: calc(100% - 1em);
 }
 
 .task-box__tags-container {
@@ -68,7 +86,7 @@
     font-size: var(--size-small);
     color: var(--clr-text);
     margin-block: 16px 32px;
-    min-height: 120px;
+    min-height: 100px;
     width: 100%;
     word-wrap: break-word;
 }

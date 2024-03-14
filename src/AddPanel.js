@@ -168,8 +168,8 @@ function createTaskBox({ title, desc, priority, tagsList, dueDate, taskId }) {
                             alt="edit icon"
                         />
                         <img
-                            class="task-box__menu task-box__icon"
-                            src="/menu-icon.png"
+                            class="task-box__delete task-box__icon"
+                            src="/delete-icon.png"
                             alt="menu icon"
                         />
                         <p class="task-box__date">Due: ${dueDate}</p>

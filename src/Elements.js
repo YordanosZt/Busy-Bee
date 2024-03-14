@@ -33,3 +33,10 @@ let priorityValue = "";
 //              TASKS
 // =================================
 const tasksContainer = document.querySelector(".tasks-container");
+
+// =================================
+//              DETAILS
+// =================================
+const mainTitleSpan = document.querySelector(".main__title span");
+
+const navBarDate = document.querySelector(".navbar__date");

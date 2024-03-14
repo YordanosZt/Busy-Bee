@@ -55,7 +55,9 @@ saveEditsBtn.onclick = () => {
     taskBox.querySelector(".task-box__title").textContent = activeData.title;
     taskBox.querySelector(".task-box__description").textContent =
         activeData.desc;
-    taskBox.querySelector(".task-box__date").textContent = activeData.dueDate;
+    taskBox.querySelector(
+        ".task-box__date"
+    ).textContent = `Due: ${activeData.dueDate}`;
 
     let tagsList = activeData.tags.map(
         (tag) => `<li class="tag__item">#${tag}</li>`

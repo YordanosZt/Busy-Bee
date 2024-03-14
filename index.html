@@ -15,7 +15,7 @@
             />
             <ul class="sidebar__nav">
                 <li class="sidebar__nav-item active">All tasks</li>
-                <li class="sidebar__nav-item">Today</li>
+                <li class="sidebar__nav-item">Priority</li>
                 <li class="sidebar__nav-item">Due dates</li>
                 <li class="sidebar__nav-item">Recurring tasks</li>
                 <li class="sidebar__nav-item">Trash</li>
@@ -46,7 +46,9 @@
 
             <section class="main__title-container">
                 <p class="main__pretitle">Hello, Yordy</p>
-                <h2 class="main__title">You've got <br />$ tasks today</h2>
+                <h2 class="main__title">
+                    You've got <br /><span>$</span> tasks today
+                </h2>
                 <div class="main__search">
                     <img
                         class="main__search-icon"
@@ -69,37 +71,35 @@
                     </button>
                 </header>
 
-                <ul class="tasks__nav">
+                <!-- ! unnecessary -->
+                <!-- <ul class="tasks__nav">
                     <li class="tasks__nav-item active">recently</li>
                     <li class="tasks__nav-item">today</li>
                     <li class="tasks__nav-item">upcoming</li>
                     <li class="tasks__nav-item">priority</li>
-                </ul>
+                </ul> -->
             </section>
 
             <section class="tasks-container">
-                <!-- <div class="task-box" data-priority-value="high">
+                <!-- <div
+                    class="task-box"
+                    data-task-id="${taskId}"
+                    data-priority-value="${priority}"
+                >
                     <div class="task-box__header">
                         <img
                             class="task-box__circle"
                             src="/circle-icon.png"
                             alt="circle icon"
                         />
-                        <h3 class="task-box__title">Lorem, ipsum dolor.</h3>
+                        <h3 class="task-box__title">${title}</h3>
                     </div>
 
                     <ul class="task-box__tags-container">
-                        <li class="tag__item">#Untagged</li>
-                        <li class="tag__item">#Untagged</li>
-                        <li class="tag__item">#Untagged</li>
-                        <li class="tag__item">#Untagged</li>
+                        ${tagsList}
                     </ul>
 
-                    <p class="task-box__description">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Cumque ratione beatae ipsum eligendi rem placeat
-                        mollitia id, perspiciatis error animi.
-                    </p>
+                    <p class="task-box__description">${desc}</p>
 
                     <div class="task-box__footer">
                         <img
@@ -108,17 +108,18 @@
                             alt="edit icon"
                         />
                         <img
-                            class="task-box__menu task-box__icon"
-                            src="/menu-icon.png"
+                            class="task-box__delete task-box__icon"
+                            src="/delete-icon.png"
                             alt="menu icon"
                         />
-                        <p class="task-box__date">Due: Jan 01, 2000</p>
+                        <p class="task-box__date">Due: ${dueDate}</p>
                     </div>
                 </div> -->
             </section>
         </main>
 
-        <aside class="details-bar">
+        <!-- ! unnecessary -->
+        <!-- <aside class="details-bar">
             <img class="details__close" src="/x-icon.png" alt="" />
 
             <div class="details__timer">
@@ -181,7 +182,7 @@
                 <p class="details__footer-date">Created on Wed, Jan 01, 2000</p>
                 <img src="/delete-icon.png" alt="" />
             </div>
-        </aside>
+        </aside> -->
 
         <div class="panel" id="panel">
             <div class="panel__bg" id="panel__bg"></div>
@@ -281,6 +282,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- ! Unfinished -->
         <!-- <div class="timer">
             <div class="timer__bg"></div>
             <div class="timer__content">
@@ -295,7 +298,6 @@
         </div> -->
 
         <script src="./src/Elements.js"></script>
-        r
         <script type="module" src="./src/main.js"></script>
     </body>
 </html>
