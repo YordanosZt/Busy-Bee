@@ -14,9 +14,10 @@ if (data_deserialized != null) {
             tagsList: tagsList.join(""),
             dueDate: taskData.dueDate,
             taskId: taskData.Id,
+            isChecked: taskData.isChecked,
         });
 
-        tasksContainer.innerHTML += taskBox;
+        allTasksContainer.innerHTML += taskBox;
     });
 }
 
@@ -99,6 +100,7 @@ addTasksPanelBtn.onclick = () => {
         dueDate: panelDueDateInput.value,
         creationDate: "",
         Id: taskId,
+        isChecked: false,
     };
 
     data.push(taskData);
@@ -119,7 +121,7 @@ addTasksPanelBtn.onclick = () => {
         taskId: taskData.Id,
     });
 
-    tasksContainer.innerHTML += taskBox;
+    allTasksContainer.innerHTML += taskBox;
 
     // Local Storage
     let data_serialized = JSON.stringify(data);
@@ -144,8 +146,18 @@ function ResetPanel() {
     addTasksPanelBtn.style.display = "block";
 }
 
-function createTaskBox({ title, desc, priority, tagsList, dueDate, taskId }) {
-    return `<div class="task-box" data-task-id="${taskId}" data-priority-value="${priority}">
+function createTaskBox({
+    title,
+    desc,
+    priority,
+    tagsList,
+    dueDate,
+    taskId,
+    isChecked,
+}) {
+    return `<div class="task-box ${
+        isChecked ? "checked" : ""
+    }" data-task-id="${taskId}" data-priority-value="${priority}">
                     <div class="task-box__header">
                         <img
                             class="task-box__circle"

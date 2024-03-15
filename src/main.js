@@ -3,11 +3,13 @@ import "../styles/style.css";
 import "../styles/components/sidebar.css";
 import "../styles/components/main.css";
 import "../styles/components/tasks.css";
-import "../styles/components/detailsBar.css";
 import "../styles/components/panel.css";
-import "../styles/components/timer.css";
+import "../styles/components/allTasksSection.css";
+import "../styles/components/prioritySection.css";
 import "../styles/utils.css";
 
 import "./AddPanel";
 import "./Details";
 import "./TaskBox";
+import "./prioritySection";
+import "./Sidebar";

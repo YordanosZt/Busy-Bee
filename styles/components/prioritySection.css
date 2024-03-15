@@ -1,0 +1,19 @@
+.priority-section-container.active {
+    display: grid;
+}
+
+.priority-section {
+    margin-bottom: 48px;
+}
+
+.priority-section__title {
+    margin-block: 24px;
+    font-size: var(--size-h3);
+    font-weight: bold;
+}
+
+.priority-section-container .tasks {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+}

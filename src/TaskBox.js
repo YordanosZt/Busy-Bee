@@ -16,6 +16,15 @@ tasksContainer.onclick = (e) => {
         taskBox = e.target.parentNode.parentNode;
 
         taskBox.classList.toggle("checked");
+
+        data.forEach((el) => {
+            if (el.Id == taskBox.dataset.taskId) {
+                el.isChecked = taskBox.classList.contains("checked")
+                    ? true
+                    : false;
+            }
+        });
+        localStorage.setItem("data", JSON.stringify(data));
     }
 
     // FOR DELETING
@@ -54,11 +63,6 @@ saveEditsBtn.onclick = () => {
     // Update Data
     activeData.title = panelTitleInput.value;
     activeData.desc = panelDescInput.value;
-    // activeData.tags = panelTagsInput.value
-    //     .split(",")
-    //     .map((value) => value.trim())
-    //     .join("");
-
     activeData.tags = panelTagsInput.value.split(",");
     activeData.dueDate = panelDueDateInput.value;
     activeData.priority = priorityValue;

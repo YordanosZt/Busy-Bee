@@ -40,3 +40,31 @@ const tasksContainer = document.querySelector(".tasks-container");
 const mainTitleSpan = document.querySelector(".main__title span");
 
 const navBarDate = document.querySelector(".navbar__date");
+
+// =================================
+//              TABS
+// =================================
+
+// Sections
+const tasksSections = document.querySelectorAll(".tasks-section");
+const sideBarTabs = document.querySelectorAll(".sidebar__nav-item");
+
+// All tasks
+const allTasksContainer = document.querySelector(".all-tasks-container");
+
+// Priority
+const priorityHighContainer = document.querySelector(
+    ".priority-section-container .high .tasks"
+);
+const priorityMediumContainer = document.querySelector(
+    ".priority-section-container .medium .tasks"
+);
+const priorityLowContainer = document.querySelector(
+    ".priority-section-container .low .tasks"
+);
+const priorityNoneContainer = document.querySelector(
+    ".priority-section-container .none .tasks"
+);
+const priorityUnsetContainer = document.querySelector(
+    ".priority-section-container .unset .tasks"
+);

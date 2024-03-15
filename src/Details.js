@@ -1,5 +1,7 @@
 // Title child count
-mainTitleSpan.textContent = tasksContainer.childElementCount;
+let data = JSON.parse(localStorage.getItem("data"));
+
+mainTitleSpan.textContent = data.filter((el) => !el.isChecked).length;
 
 // Nav Day
 const date = new Date();

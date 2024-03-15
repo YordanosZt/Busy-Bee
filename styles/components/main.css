@@ -100,42 +100,16 @@
     font-weight: bold;
 }
 
-.tasks__nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 50%;
-    margin-block: 16px;
-    list-style: none;
-}
-
-.tasks__nav-item {
-    font-size: var(--size-body);
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 3%;
-    color: var(--clr-text);
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.tasks__nav-item:hover,
-.tasks__nav-item.active {
-    color: var(--clr-primary);
-}
-
 @media (max-width: 1024px) {
     .main__search-input,
-    .tasks__header,
-    .tasks__nav {
+    .tasks__header {
         width: 80%;
     }
 }
 
 @media (max-width: 768px) {
     .main__search-input,
-    .tasks__header,
-    .tasks__nav {
+    .tasks__header {
         width: 100%;
     }
 }

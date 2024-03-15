@@ -28,16 +28,25 @@
 
     cursor: pointer;
     transition-property: background-color, color;
-    transition-duration: 0.3s;
+    transition-duration: 0.2s;
+}
+.sidebar__nav-item:hover {
+    background-color: var(--clr-accent);
 }
 
-.sidebar__nav-item:hover,
 .sidebar__nav-item.active {
     background-color: var(--clr-dark);
     color: var(--clr-light);
 }
 
-.sidebar__theme-btn {
+.sidebar__link {
     margin-top: auto;
     cursor: pointer;
+    font-size: var(--size-body);
+    text-decoration: none;
+    color: var(--clr-text);
+}
+
+.sidebar__link:hover {
+    text-decoration: underline;
 }
